@@ -1,0 +1,117 @@
+@import "~antd/dist/antd.css";
+
+@media print {
+  .noprint {
+    display: none !important;
+  }
+}
+/* a {
+  color: inherit;
+} */
+
+.ant-modal-body {
+  overflow-y: auto !important;
+}
+
+#router {
+  height: 100%;
+}
+
+.printonly {
+  display: none !important;
+  margin-bottom: 32px;
+}
+
+.space-between {
+  justify-content: space-between;
+  display: flex;
+}
+
+@media print {
+  .printonly {
+    display: block !important;
+  }
+  .printonly.printonly-flex {
+    display: flex !important;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.margin {
+  margin: 16px;
+}
+
+.margin-right {
+  margin-right: 16px;
+}
+
+.margin-left {
+  margin-left: 16px;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.whitespace-pre {
+  white-space: pre;
+}
+
+.text-white {
+  color: white;
+}
+
+.react-toast-notifications__container {
+  z-index: 10000 !important;
+}
+
+.list-actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.list-actions > :last-child {
+  margin-left: auto;
+}
+
+.ant-form-large .ant-form-item-label > label {
+  height: 24px;
+}
+
+.ant-upload-list-item-image {
+  object-fit: contain !important;
+}
+
+.ant-form-item.ant-form-item-inline {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-top: 32px;
+  align-items: baseline;
+}
+
+.ant-form-item.ant-form-item-inline .ant-form-item-control {
+  flex-grow: 0;
+  margin-right: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.antd-description-no-padding.ant-descriptions-item-content {
+  padding: 0 !important;
+}
+
+.ant-table.ant-table-small .ant-table-tbody .ant-table-wrapper:only-child .ant-table {
+  margin: -8px -8px -8px 0 !important;
+}

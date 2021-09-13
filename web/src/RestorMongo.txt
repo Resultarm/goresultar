@@ -1,0 +1,15 @@
+#!/bin/sh
+ 
+TODAY=`date +%d%b%Y`
+BACKUP_DIR=/backup/mongo
+ 
+mkdir -p ${BACKUP_DIR}/${TODAY}
+ 
+mongodump -h <DATABASE_HOST> -d <DATABASE_NAME> -u <USERNAME> -p <PASSWRD> --out ${BACKUP_DIR}/${TODAY}/
+
+
+mongorestore --db gerenciador --drop /home/centos/mongo-gr/09-09-21/gerenciador
+
+ git push gerenciador +b701d2f^:master
+
+git checkout a85d2d0 .

@@ -1,0 +1,18 @@
+.form-action-result {
+  padding: 5px;
+  margin: 10px;
+}
+
+button.submit-btn {
+  margin-top: 10px;
+}
+
+.create-modal-btn {
+  border: 1px solid black;
+  padding: 5px;
+  border-left: red;
+}
+
+.create-brand-form .ui.dropdown .menu > .item > .description {
+  float: none;
+}

@@ -1,0 +1,98 @@
+db.products.aggregate([{"$match":{"deletedAt":null}},{"$project":{"departmentId":"$departmentId","worthCost":{"$sum":{"$multiply":["$cost","$totalUnits"]}},"worthPrice":{"$sum":{"$multiply":["$price","$totalUnits"]}}}},
+{"$group":{"_id":"$departmentId","departmentId":{"$first":"$departmentId"},"totalCount":{"$sum":1},"worthCost":{"$sum":"$worthCost"},"worthPrice":{"$sum":"$worthPrice"}}},
+{
+  "$lookup":{
+    "as":"department",
+    "foreignField":"_id",
+    "from":"departments",
+    "localField":"departmentId",
+  }
+},
+{$match: {"department": {$ne: []},"department.deletedAt":null}},
+{"$unwind":{"path":"$department","preserveNullAndEmptyArrays":true}}
+])
+
+
+
+
+
+
+[{"$match":{"deletedAt":null}},{"$project":{"departmentId":"$departmentId","worthCost":{"$sum":{"$multiply":["$cost","$totalUnits"]}},"worthPrice":{"$sum":{"$multiply":["$price","$totalUnits"]}}}},{"$group":{"_id":"$departmentId","departmentId":{"$first":"$departmentId"},"totalCount":{"$sum":1},"worthCost":{"$sum":"$worthCost"},"worthPrice":{"$sum":"$worthPrice"}}},{"$lookup":{"as":"department","foreignField":"_id","from":"departments","localField":"departmentId"}},{"$unwind":{"path":"$department","preserveNullAndEmptyArrays":true}},{"$match":{"department":{"$ne":[]},"department.deletedAt":null}}]
+
+db.admins.aggregate([
+  {"$match":{"deletedAt":null}},
+  {"$group":{"_id":"$_id","totalCount":{"$sum":1} }},
+  {
+    "$lookup":{
+      "as":"orders",
+      "foreignField":"_id",
+      "from":"orders",
+      "localField":"userId",
+    }
+  },
+])
+
+
+db.organizations.aggregate([
+  {$unwind: "$branches"},
+    { "$group": {
+        "_id": "$tempId",
+        "totalValue": { 
+            "$sum":  1,
+        }
+    } }
+])
+
+
+db.orders.aggregate([
+  {
+    $group: {
+      "_id": "$userId",
+      open: {
+        $sum: {
+          $cond: [{
+            $and: [{$in:["$userId", [ObjectId("5f6249aa0188ec891f14a2dd"), ObjectId("5f6249f90188ec891f14a2f4"), ObjectId("5f624c040188ec891f14a36d"), ObjectId("5f5cdeae610d9e9b2f08e8a5")]]}, {$eq: ["$status", 1]}]
+          }, 1,0],
+        }
+      },
+      partial: {
+        $sum: {
+          $cond: [{
+            $and: [{$in:["$userId", [ObjectId("5f6249aa0188ec891f14a2dd"), ObjectId("5f6249f90188ec891f14a2f4"), ObjectId("5f624c040188ec891f14a36d"), ObjectId("5f5cdeae610d9e9b2f08e8a5")]]}, {$eq: ["$status", 2]}]
+          }, 1,0],
+        }
+      },
+      closed: {
+        $sum: {
+          $cond: [{
+            $and: [{$in:["$userId", [ObjectId("5f6249aa0188ec891f14a2dd"), ObjectId("5f6249f90188ec891f14a2f4"), ObjectId("5f624c040188ec891f14a36d"), ObjectId("5f5cdeae610d9e9b2f08e8a5")]]}, {$eq: ["$status", 3]}]
+          }, 1,0],
+        }
+      },
+    }
+  }
+  
+])
+
+db.orders.aggregate([ 
+  {
+    $match: {
+      userId: ObjectId("5f6249f90188ec891f14a2f4")
+    }
+  },
+  {
+    $group: {
+      "_id": "$userId",
+      open: {
+        $push: {
+          $cond:[{$eq: ["$status", 1]}, "$$ROOT._id",null],
+        }
+      },
+      closed: {
+        $push: {
+          $cond:[{$eq: ["$status", 3]}, "$$ROOT._id",null],
+        }
+      },
+    }
+  }
+])

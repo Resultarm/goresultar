@@ -1,0 +1,27 @@
+#order-place-form {
+  display: grid;
+  grid-template-rows: auto minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content);
+  // column-gap: 32px;
+  height: calc(100vh - 200px);
+  margin-bottom: 16px;
+
+  > * {
+    min-height: 0;
+  }
+  .ant-input-search {
+    margin-bottom: 32px;
+  }
+}
+#order-place-form {
+  min-height: 0;
+  .products-form-item {
+    // height: calc(100% - 56px - 56px - 56px - 56px); // - 32px (height) - 24px (margin-bottom)
+    overflow-y: auto;
+    padding: 0 16px;
+    height: 100%;
+
+    .ant-form-item-control-input-content {
+      height: 100%;
+    }
+  }
+}

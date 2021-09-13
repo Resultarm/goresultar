@@ -1,0 +1,6 @@
+p, Colaborador, order, read
+p, Colaborador, order, write
+p, Colaborador, product, read
+p, Colaborador, product, write
+p, Colaborador, department, write
+p,Super Admin,*,*

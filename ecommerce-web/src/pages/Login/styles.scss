@@ -1,0 +1,59 @@
+.login-page {
+  background: linear-gradient(
+    135deg,
+    rgb(15, 112, 255) 0%,
+    rgb(33, 213, 210) 100%
+  );
+  height: 100%;
+  .login-form {
+    width: 95%; // in mobile, looks good
+    max-width: 400px;
+    padding: 32px 48px 16px 48px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    .logo-wrapper {
+      min-height: 50px;
+      padding: 16px;
+      margin-bottom: 32px;
+      text-align: center;
+      background-color: rgba(33, 213, 210, 0.2);
+    }
+  }
+}
+.gray-bg {
+  .ant-input-affix-wrapper {
+    color: rgb(66, 82, 110);
+    &:not(.ant-input-affix-wrapper-focused):not(:hover) {
+      border-color: transparent;
+    }
+    .ant-input {
+      background-color: transparent !important;
+      color: inherit;
+      &:active,
+      &:hover,
+      &:focus {
+        background-color: inherit;
+        color: inherit;
+      }
+    }
+  }
+  .ant-radio-button-wrapper {
+    color: rgb(66, 82, 110);
+    &:not(.ant-radio-button-wrapper-checked) {
+      border-color: transparent;
+    }
+  }
+}
+// .ant-input {
+//   background-color: rgb(225, 227, 233) !important;
+// }
+.white-bg {
+  background-color: white;
+  // .ant-input-affix-wrapper {
+  //   background-color: rgba(225, 227, 233, 0.65);
+  // }
+}

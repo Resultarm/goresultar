@@ -1,0 +1,27 @@
+.selected-product-list {
+  overflow-y: auto;
+  height: 100%;
+
+  .selected-product-meta > .ant-list-item-meta-avatar {
+    height: 40px;
+    width: 40px;
+  }
+
+  .actions {
+    display: flex;
+    > .ant-btn {
+      margin-left: 8px;
+    }
+  }
+
+  .fields {
+    display: grid;
+    grid-template-columns: min-content min-content auto min-content;
+  }
+
+  .price {
+    text-align: right;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+  }
+}

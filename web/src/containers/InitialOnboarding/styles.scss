@@ -1,0 +1,13 @@
+.onboard-form-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .onboard-form {
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    padding: 16px;
+    max-width: 100%;
+    width: 360px;
+    margin: auto auto auto auto;
+  }
+}

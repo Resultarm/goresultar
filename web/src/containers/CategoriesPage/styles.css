@@ -1,0 +1,32 @@
+
+.categories-container h6 {
+    display: inline;
+}
+
+.categories-container button.cat-create-btn {
+    display: inline;
+    float: right;
+}
+
+.cat-create-btn {
+    border: none;
+    padding: 5px;
+
+    margin-bottom: 10px;
+}
+
+.cat-delete-btn {
+    border: none;
+    padding: 5px;
+    background: none !important;
+    margin-bottom: 10px;
+}
+
+
+.cat-edit-btn {
+    border: none;
+    padding: 0;
+    background: none !important;
+    margin-bottom: 10px;
+}
+

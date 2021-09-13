@@ -1,0 +1,13 @@
+.form-action-result {
+    padding: 5px;
+    margin: 10px;
+}
+
+button.submit-btn{
+    margin-top: 10px;;
+}
+
+.cat-btn {
+    background: none !important;
+    padding: 2px !important;
+}

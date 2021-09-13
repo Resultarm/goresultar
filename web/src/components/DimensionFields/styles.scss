@@ -1,0 +1,8 @@
+.dimension-fields-container {
+  display: flex;
+  align-items: center;
+  > * {
+    margin-right: 8px !important;
+    width: 80px !important;
+  }
+}

@@ -1,0 +1,36 @@
+.product-table {
+    width: 45% !important;
+    float: left;
+    margin: 0 10px 0 !important;
+}
+
+.image-carousel {
+    clear: both !important;
+    /*width: 90%*/
+    height: 400px;
+    /*clear: bottom;*/
+}
+
+.image-carousel:first-child {
+    clear: left !important;
+    /*width: 90%*/
+    height: 400px;
+}
+
+.product-block {
+    margin: 0 10px 0 !important;
+    float: left;
+    /*width: 70% !important;*/
+}
+
+.product-descr {
+    /*margin: 0 10px 0 !important;*/
+    /*float: left;*/
+    width: 60% !important;
+}
+
+.product-images {
+    /*margin: 0 10px 0 !important;*/
+    float: left;
+    width: 35% !important;
+}

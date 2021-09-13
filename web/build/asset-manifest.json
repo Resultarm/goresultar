@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dddbf433.chunk.css",
+    "main.js": "/static/js/main.74a10144.chunk.js",
+    "main.js.map": "/static/js/main.74a10144.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e6ae6049.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e6ae6049.js.map",
+    "static/css/2.405e23b1.chunk.css": "/static/css/2.405e23b1.chunk.css",
+    "static/js/2.475d6ba6.chunk.js": "/static/js/2.475d6ba6.chunk.js",
+    "static/js/2.475d6ba6.chunk.js.map": "/static/js/2.475d6ba6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.405e23b1.chunk.css.map": "/static/css/2.405e23b1.chunk.css.map",
+    "static/css/main.dddbf433.chunk.css.map": "/static/css/main.dddbf433.chunk.css.map",
+    "static/js/2.475d6ba6.chunk.js.LICENSE.txt": "/static/js/2.475d6ba6.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/getFetch.cjs": "/static/media/getFetch.d7d6010d.cjs",
+    "static/media/toorder.315beeed.svg": "/static/media/toorder.315beeed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6ae6049.js",
+    "static/css/2.405e23b1.chunk.css",
+    "static/js/2.475d6ba6.chunk.js",
+    "static/css/main.dddbf433.chunk.css",
+    "static/js/main.74a10144.chunk.js"
+  ]
+}

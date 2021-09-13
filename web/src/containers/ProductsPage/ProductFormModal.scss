@@ -1,0 +1,29 @@
+#product-add-modal {
+  .image-upload-container {
+    background-color: white;
+    .ant-upload-list-picture-card .ant-upload-list-item-thumbnail img {
+      width: auto;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .preview-image-container {
+      height: 300px;
+      line-height: 300px;
+      margin-bottom: 16px;
+      text-align: center;
+      > img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .dimensions-form-item {
+    .ant-form-item-control-input-content {
+      display: flex;
+    }
+  }
+}
+.ck-editor__editable {
+  min-height: 100px !important;
+}

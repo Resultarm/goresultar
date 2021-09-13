@@ -1,0 +1,27 @@
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing MongoStore" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing TransactionsRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing BrandsRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing FileService" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing Cheque" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing ClientsRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing DepartmentsRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing Expense" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing Expense Payment" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing ModelsRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing AdminRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing Onboarding" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing OrdersRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing OrganizationsRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing ProductsRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing RolesRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing ServiceRepository" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing VehicleRepository" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing TaskRepository" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing AuthService" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing SubcategoriesRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing CategoriesRepo" logger=server
+t=2021-09-10T14:21:14-0300 lvl=info msg="Initializing HTTPServer" logger=server
+t=2021-09-10T14:21:15-0300 lvl=info msg="HTTP Server Listen" logger=http.server address=localhost port=4000
+t=2021-09-10T16:17:23-0300 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2021-09-10T16:17:23-0300 lvl=info msg="server was shutdown gracefully" logger=http.server
+t=2021-09-10T16:17:23-0300 lvl=eror msg="Server shutdown" logger=server reason=nil

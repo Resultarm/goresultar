@@ -1,0 +1,12 @@
+.login-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    .aside {
+      display: none;
+    }
+  }
+}
